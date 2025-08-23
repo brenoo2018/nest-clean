@@ -1,9 +1,9 @@
 import { Encrypter } from '@/domain/forum/application/crytography/encrypter'
 import { Module } from '@nestjs/common'
-import { JwtEncrypter } from './jwt-encrypter'
 import { HashComparer } from '@/domain/forum/application/crytography/hash-comparer'
-import { BcryptHasher } from './bcrypt-hasher'
 import { HashGenerator } from '@/domain/forum/application/crytography/hash-generator'
+import { JwtEncrypter } from './jwt-encrypter'
+import { BcryptHasher } from './bcrypt-hasher'
 
 @Module({
   providers: [
@@ -22,4 +22,4 @@ import { HashGenerator } from '@/domain/forum/application/crytography/hash-gener
   ],
   exports: [Encrypter, HashComparer, HashGenerator],
 })
-export class CryptohographyModule {}
+export class CryptographyModule {}
